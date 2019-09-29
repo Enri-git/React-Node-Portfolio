@@ -1,0 +1,52 @@
+#intro{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    p{
+        font-family: 'Abel', sans-serif;
+        padding: 0 5% 0 5%;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+        text-indent: 25px;
+        margin: 0;
+        width: 60%;
+    }
+    aside{
+        width: 40%;
+        article{
+            display: flex;
+            align-items: center;
+            height: 33vh;
+            justify-content: space-between;    
+            div:nth-child(odd){
+                margin-left: -3%;
+            }
+            canvas{
+                width: 100%;
+            }
+            img{
+                width: 42%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width:900px){
+    #intro{
+        display: block;
+        height:auto;
+        p{
+            width: 100%;
+            padding: 35% 8% 5%;
+            display: inherit;
+        }
+        aside{
+            width:100%;
+            article{
+                height:auto;
+                padding: 16px;
+            }
+        }
+    }
+}

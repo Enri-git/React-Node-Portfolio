@@ -1,0 +1,29 @@
+footer {
+	position: relative;
+	bottom: 0px;
+	margin-top: -80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 40%;
+	ul {
+		li {
+			display: initial;
+			img {
+				width: 30px;
+				margin: 0 5px 0;
+			}
+		}
+	}
+}
+@media (max-width: 800px) {
+	footer {
+	  position: unset;
+	  height: auto;
+	  width: 100%;
+	  margin-top: 10px;
+	  p{
+		margin-right: 20px;
+	  }
+	}
+}

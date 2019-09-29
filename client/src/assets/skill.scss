@@ -1,0 +1,98 @@
+#skill {
+	border: 10px solid;
+	height: 100vh;
+	width: 100%;
+	padding-top: 12%;
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    div{
+      width: 55%;
+      p {
+      padding: 0 15% 0 5%;
+      line-height: 1.8;
+      }
+      h1 {
+      padding: 1% 0 0 5%;
+      }
+    }
+  }
+  aside {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    h3,h4{
+      display: block;
+    }
+    h3:nth-of-type(odd) {
+      font-size: 1.5em;
+      padding-right:4%;
+      font-weight: 500;
+      display: block;
+    }
+    h4:nth-of-type(odd) {
+      font-size: 1.5em;
+      padding-left: 5%;
+      font-weight: 300;
+      display: block;
+    }
+  }
+}
+
+.rotate-90-cw {
+	// -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-90-cw cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes rotate-90-cw {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+  }
+  @keyframes rotate-90-cw {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+  }
+
+  @media(max-width:900px){
+    #skill {
+      height: auto;
+      padding-top: 80px;
+      .d-flex {
+        width: 100%;
+        div{
+          width: 100%;
+          p {
+            width: 100%;
+            padding: 0% 10% 5%;
+            display: inherit;
+          }
+          h1 {
+          padding: 10% 0 0% 10%;
+          }
+        }
+      }
+      aside {
+        width: 350px;
+        margin: 0 auto;
+        h3:nth-of-type(odd) {
+          padding-right: 2%;
+          padding-left: 2%;
+        }
+      }
+    }
+}

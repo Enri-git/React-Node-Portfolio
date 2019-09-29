@@ -1,0 +1,33 @@
+.App-logo {
+  display: block;
+  height: 15vh;
+  top: 15px;
+  left: 40px;
+  width: 15vw;
+  position: absolute;
+}
+.App-logo img {
+  padding-top: 15px;
+  width: 100%;
+}
+ul li{
+  list-style-type: none;
+}
+ @media(max-width:640px){
+  .App-logo{
+    width: 38vw;
+  }
+}
+/*@media (min-width: 600px){
+  .App-logo{
+    width: 33vw;
+  }
+}
+@media (min-width: 1024px){
+  .App-logo{
+    max-width: 18vw;
+  }
+} */
+
+
+

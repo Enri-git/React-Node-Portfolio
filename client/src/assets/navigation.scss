@@ -1,0 +1,31 @@
+nav{
+    float:right;
+    width: 62vw;
+    height: 15vh;
+    padding-top: 2%;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            .active{
+            border: 1.5px solid #000;
+            }
+            a{
+                padding: 1.2rem 2.1rem;
+                color: #000;
+                text-decoration: none;
+                font-weight: 300;
+                &:hover{
+                    color: #cc6060;
+                }
+            }
+        } 
+    }
+}
+@media(max-width:996px){
+    nav{
+        ul{
+            display: none;
+        }
+    }
+}

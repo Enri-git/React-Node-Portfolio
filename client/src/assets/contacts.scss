@@ -1,0 +1,92 @@
+#contacts{
+    border: 10px solid;
+    height:100vh;
+    padding-top: 10%;
+    .d-flex{
+        display: flex;
+        width: 100%;
+        height: 70%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 5%;
+        div{
+            h1,p {
+                padding: 1% 0 0 5%;
+            }
+        }
+        form{
+            width:50vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            label{
+                position: relative;
+                left: 15%;
+                top:0px;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                align-self: start;
+            }
+            input[type=text], input[type=email], select, textarea{
+                display: block;
+                width: 70%;
+                border: 0;
+                padding: 8px 5px;
+                font-size: .875em;
+                background: transparent;
+                color: black;
+                margin-bottom: 2%;
+            }
+            input[type=text]{
+                outline: none;
+                border-bottom: 4px solid rgb(206, 206, 199);
+                &:focus, &:hover{
+                    outline: none;
+                    border-color: #666;
+                    transition: border-color .25s;
+                    background-color:#f1e8e3;;
+                }
+            }
+            input[type=email]{
+                outline: none;
+                border-bottom: 4px solid rgb(0, 0, 0);
+                &:focus, &:hover{
+                    outline: none;
+                    border-color: #333;
+                    transition: border-color .25s;
+                    background-color:#f1e8e3;;
+                }
+            }
+            textarea{
+                outline: none;
+                border-bottom: 4px solid #f1b393;
+                margin-bottom: 5%;
+                &:focus, &:hover{
+                    outline: none;
+                    border-color: rgb(243, 151, 105);
+                    transition: border-color .50s;
+                    background-color:#f1e8e3;;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:900px){
+    #contacts{
+        border: 10px solid;
+        height:auto;
+        padding-top: 30%;
+        .d-flex{
+            // display: flex;
+            // width: 100%;
+            height: auto;
+            flex-direction: column;
+            // justify-content: space-evenly;
+            // align-items: center;
+            form {
+                width: 50vh;
+            }
+        }
+    }
+}
