@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const app = express()
-
+const PORT = 5000;
 app.set("port", process.env.PORT || 5000);
 
 //It is required to read the file .env
@@ -81,7 +81,7 @@ app.post('/api/form', (req, res) => {
 
 })
 
-app.listen(app.get("port"), () => {
+app.listen(app.get("PORT"), () => {
     console.log(`Server listening on port: htt://localhost:${app.get("PORT")}/`);// eslint-disable-line no-console
 })
 
