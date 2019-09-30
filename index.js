@@ -7,17 +7,7 @@ const app = express()
 //It is required to read the file .env
 require('dotenv').config()
 
-app.set("port", process.env.PORT || 5000);
-const path = require('path');
-
-// Express only serves static assets in production
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, 'client/build')));
-    app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname + '/client/public/index.html'));
-    })
-}
-
+app.use(cors());
 
 //it parses our form data into json 
 app.use(bodyParser.json())
@@ -81,7 +71,18 @@ app.post('/api/form', (req, res) => {
 
 })
 
-app.listen(app.get("port"), () => {
-    console.log(`Server listening on port: http://localhost:${app.get("PORT")}/`);// eslint-disable-line no-console
+
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + "client", "build", "index.html"));
+    })
+}
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server listening on port: http://localhost:${"PORT"}`);// eslint-disable-line no-console
 })
 
