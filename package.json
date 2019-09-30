@@ -1,16 +1,17 @@
 {
-  "name": "Portfolio",
+  "name": "React-Node-Portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "node start-client.js",
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "",
+  "author": "ENRICA",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
