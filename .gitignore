@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-server
+
 # dependencies
 /node_modules
 node_modules
@@ -8,6 +8,7 @@ node_modules
 
 # testing
 /coverage
+index-test.js
 
 # production
 /build
