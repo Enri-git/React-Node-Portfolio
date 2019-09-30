@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const app = express()
 
+
 //It is required to read the file .env
 require('dotenv').config()
 
@@ -69,7 +70,8 @@ app.post('/api/form', (req, res) => {
 
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
