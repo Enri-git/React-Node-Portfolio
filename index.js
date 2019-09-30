@@ -8,14 +8,14 @@ const app = express()
 require('dotenv').config()
 app.set("port", process.env.PORT || 5000);
 
-const path = require('path');
+//const path = require('path');
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, 'client/build')));
-    app.get('./', (req, res) => {
-        res.sendFile(path.join(__dirname + '/client/public/index.html'));
-    })
+    // app.get('./', (req, res) => {
+    //     res.sendFile(path.join(__dirname + '/client/public/index.html'));
+    // })
 }
 
 
@@ -82,6 +82,6 @@ app.post('/api/form', (req, res) => {
 })
 
 app.listen(app.get("port"), () => {
-    console.log(`Server listening on port: htt://localhost:${app.get("PORT")}/`);// eslint-disable-line no-console
+    console.log(`Server listening on port: htt://localhost:${app.get("port")}/`);// eslint-disable-line no-console
 })
 
