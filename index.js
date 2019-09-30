@@ -82,6 +82,6 @@ app.post('/api/form', (req, res) => {
 })
 
 app.listen(app.get("port"), () => {
-    console.log(`Server listening on port: htt://localhost:${app.get("PORT")}/`);// eslint-disable-line no-console
+    console.log(`Server listening on port: http://localhost:${app.get("PORT")}/`);// eslint-disable-line no-console
 })
 
