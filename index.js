@@ -3,12 +3,12 @@ const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const app = express()
 
+app.set("port", process.env.PORT || 5000);
 
 //It is required to read the file .env
 require('dotenv').config()
 
 const path = require('path');
-app.set("port", process.env.PORT || 5000);
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === "production") {
