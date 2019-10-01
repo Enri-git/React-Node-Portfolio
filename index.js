@@ -40,7 +40,7 @@ app.post('/api/form', (req, res) => {
     //setup email data
     let mailOptions = {
         from: ' "Form web-site" <bertienrica@libero.it>', //sender address
-        to: 'bertienrica@libero.it', //list of receivers
+        to: 'berti.enrica@gmail.com', //list of receivers
         //cc: req.body.Email,
         subject: 'New Message',
         text: req.body.Message,
