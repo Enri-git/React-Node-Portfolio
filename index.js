@@ -28,8 +28,8 @@ app.post('/api/form', (req, res) => {
 
     // create reusable transporter object using the default Simple Mail Transfer Protocol (SMTP)
     let transporter = nodemailer.createTransport({
-        host: 'smtp.libero.it',
-        port: 465,
+        host: 'smtp.mailgun.org',
+        port: 587,
         secure: 'false', //true for 465, false for other ports
         auth: {
             user: process.env.APP_USER,
@@ -40,7 +40,7 @@ app.post('/api/form', (req, res) => {
     //setup email data
     let mailOptions = {
         from: ' "Form web-site" <bertienrica@libero.it>', //sender address
-        to: 'bertienrica@glibero.it', //list of receivers
+        to: 'berti.enrica@gmail.com', //list of receivers
         subject: 'New Message',
         text: req.body.Message,
         html: htmlEmail,
