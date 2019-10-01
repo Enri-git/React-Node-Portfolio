@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const cors = require('cors')
+// const cors = require('cors')
 const app = express()
 
 
 //It is required to read the file .env
 require('dotenv').config()
 
-app.use(cors());
+// app.use(cors());
 
 //it parses our form data into json 
 app.use(bodyParser.json())
@@ -30,7 +30,7 @@ app.post('/api/form', (req, res) => {
     let transporter = nodemailer.createTransport({
         host: 'smtp.libero.it',
         port: 465,
-        secure: 'true', //true for 465, false for other ports
+        secure: 'false', //true for 465, false for other ports
         auth: {
             user: process.env.APP_USER,
             pass: process.env.APP_PASS
@@ -40,8 +40,7 @@ app.post('/api/form', (req, res) => {
     //setup email data
     let mailOptions = {
         from: ' "Form web-site" <bertienrica@libero.it>', //sender address
-        to: 'berti.enrica@gmail.com', //list of receivers
-        //cc: req.body.Email,
+        to: 'bertienrica@glibero.it', //list of receivers
         subject: 'New Message',
         text: req.body.Message,
         html: htmlEmail,
