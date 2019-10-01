@@ -45,9 +45,9 @@ app.post('/api/form', (req, res) => {
         subject: 'New Message',
         text: req.body.Message,
         html: htmlEmail,
-        tls: {
-            rejectUnauthorized: false
-        }
+        // tls: {
+        //     rejectUnauthorized: false
+        // }
     }
 
     transporter.verify(function (error, success) {
