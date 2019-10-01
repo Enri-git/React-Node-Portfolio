@@ -41,13 +41,13 @@ app.post('/api/form', (req, res) => {
     let mailOptions = {
         from: ' "Form web-site" <bertienrica@libero.it>', //sender address
         to: 'bertienrica@libero.it', //list of receivers
-        cc: req.body.Email,
+        //cc: req.body.Email,
         subject: 'New Message',
         text: req.body.Message,
         html: htmlEmail,
-        // tls: {
-        //     rejectUnauthorized: false
-        // }
+        tls: {
+            rejectUnauthorized: false
+        }
     }
 
     transporter.verify(function (error, success) {
