@@ -1,14 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-// const cors = require('cors')
+
 const app = express()
 
 
 //It is required to read the file .env
 require('dotenv').config()
 
-// app.use(cors());
 
 //it parses our form data into json 
 app.use(bodyParser.json())
@@ -26,9 +25,10 @@ app.post('/api/form', (req, res) => {
         <p>${req.body.Message}</p>
         `;
 
-    // create reusable transporter object using the default Simple Mail Transfer Protocol (SMTP)
+    //create reusable transporter object using the default Simple Mail Transfer Protocol (SMTP)
     let transporter = nodemailer.createTransport({
-        host: 'smtp.mailgun.org',
+        service: "Gmail",
+        host: 'smtp.gmail.com',
         port: 587,
         secure: 'false', //true for 465, false for other ports
         auth: {
@@ -39,8 +39,8 @@ app.post('/api/form', (req, res) => {
 
     //setup email data
     let mailOptions = {
-        from: ' "Form web-site" <bertienrica@libero.it>', //sender address
-        to: 'berti.enrica@gmail.com', //list of receivers
+        from: ' "Form web-site" <berti.enrica81@gmail.com>', //sender address
+        to: 'berti.enrica81@gmail.com', //list of receivers
         subject: 'New Message',
         text: req.body.Message,
         html: htmlEmail,
@@ -83,6 +83,6 @@ if (process.env.NODE_ENV === "production") {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port: http://localhost:${"PORT"}`);// eslint-disable-line no-console
+    console.log(`Server listening on port: http://localhost:${'PORT'}`);// eslint-disable-line no-console
 })
 
