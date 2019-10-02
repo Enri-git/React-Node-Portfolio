@@ -28,8 +28,7 @@ export default class Contacts extends Component {
         }).then((response) => {
             if (response.data.msg === 'success') {
                 document.querySelector('.msg').style.display = "block";
-                window.location.reload('./');
-
+                // window.location.reload();
             } else if (response.data.msg === 'fail') {
                 alert("Message failed to send")
             }
