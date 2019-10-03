@@ -10,7 +10,9 @@ export default class Footer extends Component {
                     <li><a href="https://www.xing.com/contacts/requests" target="_blank" rel="noopener noreferrer"><img src="../img/xing.png" alt="king" /></a></li>
                     <li><a href="https://www.linkedin.com/in/enrica-berti-ab935557/" target="_blank" rel="noopener noreferrer"><img src="../img/linkedin.png" alt="linkedin" /></a></li>
                 </ul>
-                <p>MADE with <i style={{ fontSize: 24 + 'px' }} className="fa">&#xf0f4;</i></p>
+                <span>
+                    <p>MADE with</p><img src="../img/coffee-solid.svg" alt="coffee-fontowsome" />
+                </span>
             </footer>
         )
     }

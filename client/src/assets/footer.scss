@@ -10,9 +10,16 @@ footer {
 		li {
 			display: initial;
 			img {
-				width: 30px;
+				width: 28px;
 				margin: 0 5px 0;
 			}
+		}
+	}
+	span{
+		display: inherit;
+		img{
+			width: 30px;
+			margin-left: 8px;
 		}
 	}
 }
