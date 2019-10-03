@@ -5,11 +5,11 @@
     {
       "src": "favicon.ico",
       "sizes": "16x16",
-      "type": "image/x-icon"
+      "type": "image/ico"
     }
   ],
-  "start_url": ".",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "standalone"
 }
