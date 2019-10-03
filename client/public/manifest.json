@@ -3,12 +3,12 @@
   "short_name": "Enica-Portfolio",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "16x16",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://enrica-react-portfolio.herokuapp.com/",
   "theme_color": "#fff",
   "background_color": "#fff",
   "display": "standalone"
