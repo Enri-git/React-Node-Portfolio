@@ -3,9 +3,9 @@
   "short_name": "Enica-Portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.png",
       "sizes": "16x16",
-      "type": "image/ico"
+      "type": "image/png"
     }
   ],
   "start_url": "/",
