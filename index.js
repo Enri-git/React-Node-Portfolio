@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const app = express()
+const app = express();
 
 
 //It is required to read the file .env
@@ -72,12 +72,9 @@ app.post('/api/form', (req, res) => {
 
 
 // Express only serves static assets in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname + "client", "build", "index.html"));
-    })
+    app.use('*', express.static('client/build'))
 }
 const PORT = process.env.PORT || 5000;
 
