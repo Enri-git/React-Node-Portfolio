@@ -1,6 +1,13 @@
 {
   "name": "Enrica-React-Node-Portfolio",
   "short_name": "Enica-Portfolio",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "Windows icon"
+    }
+  ],
   "start_url": "/",
   "theme_color": "#fff",
   "background_color": "#fff",
