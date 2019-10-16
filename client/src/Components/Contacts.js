@@ -5,6 +5,10 @@ import axios from 'axios';
 export default class Contacts extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            isSubmit: false,
+            sendMessage: "",
+        }
         this.refName = React.createRef();
         this.refEmail = React.createRef();
         this.refMessage = React.createRef();
@@ -17,6 +21,7 @@ export default class Contacts extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        this.setState({ isSubmit: true })
         axios({
             method: "POST",
             url: '/api/form',
@@ -27,11 +32,13 @@ export default class Contacts extends Component {
             }
         }).then((response) => {
             if (response.data.msg === 'success') {
-                document.querySelector('.msg').style.display = "block";
-                // window.location.reload();
+                this.setState({ sendMessage: "Thank you for your Message!!" })
+                //window.location.reload();
             } else if (response.data.msg === 'fail') {
-                alert("Message failed to send")
+                this.setState({ sendMessage: "Try again!!" })
             }
+        }).catch(err => {
+            this.setState({ sendMessage: "There was a problem with server, please don't try again, contact this person Ahmad.k.youssef@gmail.com!!" })
         })
     };
 
@@ -65,7 +72,7 @@ export default class Contacts extends Component {
                             }}>
                             SEND
                         </button>
-                        <div className="msg" hidden>Thank you for your Message!!</div>
+                        {this.state.isSubmit && <div className="msg">{this.state.sendMessage}</div>}
                     </form>
                 </div>
             </section>

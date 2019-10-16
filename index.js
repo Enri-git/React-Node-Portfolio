@@ -67,7 +67,6 @@ app.post('/api/form', (req, res) => {
 
     console.log(req.body)
     res.json({ msg: 'success' })
-    req.redirect('/');
 })
 
 
