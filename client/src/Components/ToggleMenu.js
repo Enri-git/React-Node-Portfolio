@@ -9,16 +9,16 @@ export default class ToggleMenu extends Component {
 
     showMenu = (event) => {
         event.preventDefault();
-        this.setState({ showMenu: true }, () => {
-            document.addEventListener('click', this.closeMenu)
-        });
-        //this.setState({ showMenu: !this.state.showMenu})
+        // this.setState({ showMenu: true }, () => {
+        //     document.addEventListener('click', this.closeMenu)
+        // });
+        this.setState({ showMenu: !this.state.showMenu })
     }
-    closeMenu = () => {
-        this.setState({ showMenu: false }, () => {
-            document.removeEventListener('click', this.closeMenu)
-        });
-    }
+    // closeMenu = () => {
+    //     this.setState({ showMenu: false }, () => {
+    //         document.removeEventListener('click', this.closeMenu)
+    //     });
+    // }
 
     render() {
         console.log(this.state.showMenu);
